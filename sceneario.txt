@@ -1,0 +1,139 @@
+@OnlineBanking
+Feature: Online Banking Project 
+
+Background:
+Given clear the already created users before starting the scenario
+
+Scenario: successfull login and registration
+   Given user is on home page
+When valid details are given
+Then clicks on registration
+
+Scenario: validating heading of home page
+  Given user is on home page  
+  Then verify the title of home page
+  
+  Scenario: validating admin login button
+  Given user is on home page  
+  When user clicks on admin login
+  Then verify the login page
+
+
+Scenario: validation of the user id when it is left empty
+   Given user is on login page
+When user left the field empty
+And clicks on Login
+Then Please enter userid
+
+Scenario: validation of the user id when invalid details given
+   Given user is on login page
+When user gives invalid details
+And clicks on Login
+Then invalid details
+
+Scenario: validation of the password when it is left empty
+   Given user is on login page
+When user left the password field empty
+And clicks on Login
+Then Please enter password 
+
+Scenario: validation of the password when invalid details are given
+   Given user is on login page
+When user give invalid
+And clicks on Login
+Then invalid Credentials
+
+Scenario: Successful login
+   Given user is on login page
+When user gives valid userid and password
+And clicks on Login
+Then display the options 
+
+Scenario: verification of title of the reg page
+   Given user is on reg page
+When verify the title of reg page
+And link of add new account
+Then click on add new account link
+
+Scenario: validating heading of form page
+  Given user is on form page  
+  Then verify the title of form page
+  
+  Scenario: validation of the card holder name when it is left empty
+   Given user is on form page
+When user left the card holder name field empty
+And clicks on registration
+Then please fill the card holder name
+
+ Scenario: validation of the card holder name consists only characters
+   Given user is on form page
+When user gives card holder name incorrect
+And clicks on registration
+Then only charaters
+
+ Scenario: validation of the card holder name consists only characters
+   Given user is on form page
+When user gives card holder name incorrect
+And clicks on registration
+Then only charaters
+
+ Scenario: validation of the address when it is left empty
+   Given user is on form page
+When user left the address field empty
+And clicks on registration
+Then please fill the address
+
+ Scenario: validation of the pan no when it is left empty
+   Given user is on form page
+When user left the pan no field empty
+And clicks on registration
+Then please fill the pan no
+
+ Scenario: validation of the pan no with ten
+   Given user is on form page
+When user gives the invalid pan no 
+And clicks on registration
+Then please enter valid pan no
+
+ Scenario: validation of the pan no with alphanumeric
+   Given user is on form page
+When user gives the invalid pan no details
+And clicks on registration
+Then please enter valid pan no details
+
+Scenario: validation of the email when invalid format is given
+   Given user is on form page
+When user gives invalid email 
+And clicks on  registration
+Then please fill the email
+
+Scenario: validation of the balance is only digits
+   Given user is on form page
+When user gives invalid balance 
+And clicks on  registration
+Then please fill the correct balance
+
+Scenario: validation of the current date
+   Given user is on form page
+When user gives wrong date
+And clicks on  registration
+Then automates to current date
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
